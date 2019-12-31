@@ -17,11 +17,12 @@ function zeroSum(numbers) {
 		if (check + numbers[i] === 0) {
 			return true
 		}
-		else if (i === numbers.length - 1) {
-			return zeroSum(numbers.slice(1))
-		}
 	}
+	if (numbers.length === 0) {
 		return false;
+	}
+		
+	return zeroSum(numbers.slice(1))
 }
 
 
